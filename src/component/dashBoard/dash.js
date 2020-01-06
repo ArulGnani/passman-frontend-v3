@@ -43,7 +43,7 @@ class Dash extends Component {
 
     fetchAllPassword = (key) => {
         const authKey = key
-        fetch('http://ec2-18-188-180-58.us-east-2.compute.amazonaws.com:5000/dash/get-all-passwords',{
+        fetch('https://passman-v3.herokuapp.com/api/dash/get-all-passwords',{
             method : "GET",
             headers : { "auth-key" : authKey }
         })
@@ -70,7 +70,7 @@ class Dash extends Component {
     fetchDeleted = (delId) => {
         const del = delId
         const delObj = {"delId" : del}
-        fetch('http://ec2-18-188-180-58.us-east-2.compute.amazonaws.com:5000/dash/delete-password',{
+        fetch('https://passman-v3.herokuapp.com/api/dash/delete-password',{
             method : "DELETE",
             headers : { 
                 'Content-Type' : 'application/json',

@@ -39,7 +39,7 @@ class SignIn extends Component{
                             "email" : this.state.email,
                             "password" : this.state.password2 
                         }
-        fetch("http://ec2-18-188-180-58.us-east-2.compute.amazonaws.com:5000/api/auth/register",{
+        fetch("https://passman-v3.herokuapp.com/api/auth/register",{
             method : "POST",
             headers : {
                 'Accept': 'application/json',

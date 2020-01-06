@@ -38,7 +38,7 @@ class Login extends Component {
     loginUser = () => {
         const newUser = { "email" : this.state.email,
                           "password" : this.state.password }
-        fetch("http://ec2-18-188-180-58.us-east-2.compute.amazonaws.com:5000/api/auth/login",{
+        fetch("https://passman-v3.herokuapp.com/api/auth/login",{
             method : "POST",
             headers : {
                 'Accept': 'application/json',

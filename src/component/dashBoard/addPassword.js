@@ -50,7 +50,7 @@ class AddPassword extends Component {
         const appName = this.state.appName
         const key = this.state.authKey
         const sendObj = {"appName" : appName}
-        fetch('http://ec2-18-188-180-58.us-east-2.compute.amazonaws.com:5000/dash/add',{
+        fetch('https://passman-v3.herokuapp.com/api/dash/add',{
             method : "POST",
             headers : {
                 'Accept': 'application/json',
