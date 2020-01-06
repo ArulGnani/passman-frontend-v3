@@ -42,6 +42,7 @@ class Login extends Component {
             method : "POST",
             headers : {
                 'Accept': 'application/json',
+                'Access-Control-Allow-Origin': true,
                 'Content-Type': 'application/json'
             },
             body : JSON.stringify(newUser)
@@ -54,9 +55,7 @@ class Login extends Component {
                 this.setAllFieldsEmpty()
                 this.switchDashBoard()
             }else{
-                this.loginErr(data)
-                console.log('err')
-                
+                this.loginErr(data)               
             }
         })
     }
