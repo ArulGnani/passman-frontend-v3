@@ -463,7 +463,7 @@
 
 /* --------------------------------------------------------- */
 /* for mobile view  */
-@media screen and (max-width:300px){
+@media screen and (max-width:400px){
     /* main component */
     .main{
         border: 2px greenyellow solid;

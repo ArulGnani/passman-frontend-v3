@@ -50,6 +50,11 @@ class Profile extends Component {
                 })
             }
         })
+        .catch(err => {
+            if (err){
+                console.log("")
+            }
+        })
     }
 
     gotoDash = () => {

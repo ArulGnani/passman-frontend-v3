@@ -74,6 +74,11 @@ class AddPassword extends Component {
                 })
             }
         })
+        .catch(err => {
+            if (err){
+                console.log("")
+            }
+        })
     }
 
     isValid = () => {

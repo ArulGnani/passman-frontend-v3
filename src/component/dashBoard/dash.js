@@ -53,6 +53,11 @@ class Dash extends Component {
                 allPasswords : [...data]
             })
         })
+        .catch(err => {
+            if (err){
+                console.log("")
+            }
+        })
     }
 
     addNewPass = (newPass) =>{
@@ -82,6 +87,11 @@ class Dash extends Component {
         .then(data => {
             if (data){
                 this.updateStateAfterDelete(del)
+            }
+        })
+        .catch(err => {
+            if (err){
+                console.log("")
             }
         })
     }

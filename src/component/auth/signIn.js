@@ -63,6 +63,11 @@ class SignIn extends Component{
             }
             this.setAllFieldsEmpty()
         })
+        .catch(err => {
+            if (err){
+                console.log("")
+            }
+        })
     }
 
     // client side validation 

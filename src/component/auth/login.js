@@ -58,6 +58,11 @@ class Login extends Component {
                 this.loginErr(data)               
             }
         })
+        .catch(err => {
+            if (err){
+                console.log("login....")
+            }
+        })
     }
 
     // set validation to success 
