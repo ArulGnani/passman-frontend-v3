@@ -1,0 +1,50 @@
+#add-header{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 1px;
+}
+.add-form{
+    width: 100%;
+    padding: 10px;
+}
+.add-line{
+    border: 3px solid goldenrod;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.add-err{
+    color: red;
+    font-weight: 600;
+    text-align: center;
+}
+.add-ok{
+    color: rgb(52, 160, 52);
+    font-weight: 600;
+    text-align: center;
+}
+.add-form-input{
+    border: 3px solid gray;
+    border-radius: 10px;
+    width: 90%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center
+}
+.add-btn{
+    background: goldenrod;
+    border: 3px solid goldenrod;
+    border-radius: 10px;
+    width: 90%;
+    padding: 5px 20px;
+    font-size: 15px;
+    font-weight: 800;
+    transition: background 1s ease-in;
+}
+.add-btn:hover{
+    color: goldenrod;
+    background: white;
+}

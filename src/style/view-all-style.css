@@ -1,0 +1,103 @@
+/* view all password component */
+#box{
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    padding: 20px;
+}
+.view-appname-main{
+    line-height: 5px;
+}
+.view-password-main{
+    border: 2px goldenrod solid;
+    margin-bottom: 20px;
+}
+.view-appname-label{
+    font-size: 15px;
+    font-weight: 600;
+}
+.view-appname{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.view-password-label{
+    font-size: 15px;
+    font-weight: 600;
+}
+.view-password{
+    background: grey;
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 10px;
+    margin-left: 10px;
+
+}
+.view-psd-main{
+    margin-bottom: 10px;
+}
+.view-date{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.view-btn{
+    background: goldenrod;
+    border: 3px solid goldenrod;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 15px;
+    font-weight: 800;
+    transition: background 1s ease-in;
+}
+.view-btn:hover{
+    background: white;
+    color: goldenrod;
+}
+/* search component */
+.view-search{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.view-input{
+    width: 40%;
+    border: 3px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.view-src-btn{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 800;
+    margin-left: 15px;
+    background: goldenrod;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: background 1s ease-in;
+}
+.view-src-btn:hover{
+    background: white;
+    color: goldenrod;
+}
+.view-all-btn{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 800;
+    margin-left: 10px;
+    background: goldenrod;
+    border: 3px solid goldenrod;
+    border-radius: 10px;
+    transition: background 1s ease-in;
+}
+.view-all-btn:hover{
+    background: white;
+    color: goldenrod;
+}
+#view-line{
+    padding: 1px;
+    background: goldenrod;
+}

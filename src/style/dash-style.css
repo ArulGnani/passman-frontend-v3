@@ -1,0 +1,36 @@
+/* dashboard component */
+
+#nav-bg{
+    background: goldenrod;
+}
+#dash-header{
+    color: white;
+    font-size: 30px;
+    margin-top: 10px;
+    transition: color 3s ease-in;
+}
+#dash-header:hover{
+    color: rgb(49, 37, 7);
+}
+#btn{
+    border: 2px solid white;
+}
+#nav-in{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-left: 25%;
+    transition: color 3s ease-in-out;
+}
+#nav-in:hover{
+    border-top: 2px solid white;
+    margin: auto;
+}
+
+#nav-line{
+    padding: 1px;
+    background: goldenrod;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

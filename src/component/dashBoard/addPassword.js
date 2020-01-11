@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Login from '../auth/login'
 
+// custom style 
+import '../../style/add-style.css'
+
 class AddPassword extends Component {
     constructor(){
         super()
@@ -116,16 +119,17 @@ class AddPassword extends Component {
             )
         }
         return (
-            <div className="add-container">
+            <div className="container">
+                <h3 id="add-header">add new password</h3>
                 <form className="add-form">
-                    <label htmlFor="appname" className="add-form-label">
-                        add new password
-                    </label>
-                    <p className="add-line"><small className="add-err">
-                        {err}
-                    </small><small className="add-ok">
-                        {success}
-                    </small></p>
+                    <p className="add-line">
+                        <small className="add-err">
+                            {err}
+                        </small>
+                        <small className="add-ok">
+                            {success}
+                        </small>
+                    </p>
                     <input type="text" className="add-form-input" id="appname" 
                     aria-describedby="emailHelp" placeholder="enter a app name" 
                     name="appName" value={this.state.appName} onChange={this.handelChange}/>

@@ -5,6 +5,9 @@ import Profile from './proFile'
 import Login from '../auth/login'
 import About from './about'
 
+// style 
+import '../../style/dash-style.css'
+
 class Dash extends Component {
     constructor(props){
         super(props)
@@ -133,6 +136,7 @@ class Dash extends Component {
         })
     }
 
+
     gotoAbout = () => {
         this.setState({
             about : true
@@ -171,28 +175,38 @@ class Dash extends Component {
         } 
 
         return (
-            <div className="dash-container">
-                <div className="dash-nav">
-                    <div className="dash-logo">
-                        <h3 className="">DashBoard</h3>
+            <div className="">
+                <nav className="navbar navbar-expand-lg navbar-dark" id="nav-bg">
+                    <h1 className="navbar-brand" id="dash-header">DashBoard</h1>
+                    <button id="btn" className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul className="navbar-nav">
+                            <li className="nav-item mr-5">
+                                <div id="nav-in" className="nav-link text-center" onClick={this.gotoProfile}>
+                                    Profile 
+                                </div>
+                            </li>
+                            <li className="nav-item mr-5">
+                                <div id="nav-in" className="nav-link text-center" onClick={this.gotoAbout}>
+                                    About
+                                </div>
+                            </li>
+                            <li className="nav-item mr-5">
+                                <div id="nav-in" className="nav-link text-center" onClick={this.logout}>
+                                    Logout 
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div className="dash-nav-item" onClick={this.gotoProfile}>
-                        Profile 
+                </nav>
+                <div>
+                    <div>
+                        <AddPassword newPassword={this.addNewPass}/>
                     </div>
-                    <div className="dash-nav-item" onClick={this.logout}>
-                        Logout 
-                    </div>
-                    <div className="dash-nav-item" onClick={this.gotoAbout}>
-                        About
-                    </div>
-                </div>
-                <hr className="dash-line"/>
-                <div className="dash-active">
-                        <div className="dash-add-password">
-                            <AddPassword newPassword={this.addNewPass}/>
-                        </div>
-                    <hr className="dash-line"/>
-                    <div className="dash-view-password">
+                    <hr id="nav-line"/>
+                    <div>
                         <ViewAllPasswords allPasswords={this.state.allPasswords}
                         deletePassword={this.deletePassword}/>
                     </div>

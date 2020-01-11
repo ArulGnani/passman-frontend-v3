@@ -3,7 +3,6 @@ import SiginIn from './signIn.js'
 import Login from './login.js'
 import '../../style/main.css'
 
-
 class Main extends Component {
     constructor(props){
         super(props)
@@ -34,17 +33,22 @@ class Main extends Component {
         
 
         return(
-            <div className="main">
-                <div className="main-signin" onClick={this.gotoSigin}>
-                    <h2> sign in </h2>
-                    <small>new user!</small>
-                </div>
-                <hr className="main-line"/>
-                <div className="main-login" onClick={this.gotoLogin}>
-                    <h2> login </h2>
-                    <small>already have an account!</small>
-                </div>
-                
+            <div className="container col-lg-4" id="top">
+                <div className="card" id="border-box">
+                    <div className="card-body text-center" onClick={this.gotoSigin}
+                    id="text-animate">
+                        <h2 className="card-title"> 
+                            sign in 
+                        </h2>
+                        <small>new user!</small>
+                    </div>
+                    <hr id="main-line"/>
+                    <div className="card-body text-center" onClick={this.gotoLogin}
+                    id="text-animate">
+                        <h2 className="card-title"> login </h2>
+                        <small>already have an account!</small>
+                    </div>
+                </div>    
             </div>
         )
 

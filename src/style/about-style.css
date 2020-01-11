@@ -1,0 +1,58 @@
+/* about component  */
+.abt-container{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+.abt-line{
+    padding: 2px;
+    border: none;
+    background: goldenrod;
+}
+.abt-main{
+    padding: 20px;
+}
+.abt-header{
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.abt-back{
+    float: right;
+    background: goldenrod;
+    border: 3px solid goldenrod;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    transition: background 1s ease-in;
+}
+.abt-back:hover{
+    background: white;
+    color: goldenrod;
+}
+.abt-session{
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.abt-author{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.abt-author a{
+    text-decoration: none;
+    color : black;
+    background: greenyellow;
+    margin-left: 10px;
+    padding: 10px;
+}
+.abt-endline{
+    padding: 2px;
+    border: none;
+    background: goldenrod;
+    margin-top: 20px;
+    
+}

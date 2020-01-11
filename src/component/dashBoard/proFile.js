@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Login from '../auth/login'
 import Dash from './dash'
 
+// custom css 
+import '../../style/profile-style.css'
+
 class Profile extends Component {
     constructor(props){
         super(props)
@@ -68,7 +71,7 @@ class Profile extends Component {
         const password = user.allPasswordGenrated
         if (user.userInfo){
             return(
-                <div className="pro-main">
+                <div className="container">
                     <div className="pro-val">
                         <h3>
                             <small className="pro-label">user name :</small>
@@ -97,20 +100,15 @@ class Profile extends Component {
                     <div className="pro-password-main">
                         {password.map(pass => {
                             return (
-                                <div key={pass._id} className="pro-pass">
+                                <div key={pass._id} className="container" id="pro-box">
                                     <div className="pro-pass-e">
                                         <p className="pro-pass-l">app name:
                                             <b className="pro-pass-v">{pass.appName}</b>
                                         </p>
                                     </div>
                                     <div className="pro-pass-e">
-                                        <p className="pro-pass-l">genrated password:
+                                        <p className="pro-pass-l">password:
                                             <b className="pro-pass-p">{pass.genPass}</b>
-                                        </p>
-                                    </div>
-                                    <div className="pro-pass-e">
-                                        <p className="pro-pass-l">created at:
-                                            <b className="pro-pass-v">{pass.passGenratedAt}</b>
                                         </p>
                                     </div>
                                 </div>
@@ -140,10 +138,10 @@ class Profile extends Component {
             )
         }
         return (
-            <div className="pro-container">
+            <div className="container mt-3">
                 <p className="pro-err"> {err} </p>
                 <div>
-                    <button className="pro-back" 
+                    <button id="pro-back" 
                     onClick={this.gotoDash}>back</button>
                     {profile}
                 </div>

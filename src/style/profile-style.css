@@ -1,0 +1,73 @@
+/* profile component */
+#pro-box{
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+
+#pro-back{
+    float: right;
+    background: goldenrod;
+    border: 3px solid goldenrod;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+    transition: background 1s ease-in;
+}
+#pro-back:hover{
+    color: goldenrod;
+    background: white;
+}
+
+.pro-err{
+    border: 2px goldenrod solid;
+    color: rgb(204, 25, 25);
+    text-align: center;
+}
+.pro-line{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: goldenrod;
+    padding: 2px;
+    border : none
+}
+.pro-label{
+    font-size: 14px;
+    font-weight: 600;
+}
+.pro-v{
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.pro-val{
+    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+.pro-password-main{
+    padding: 10px;
+}
+.pro-pass{
+    border: 2px goldenrod solid;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.pro-pass-l{
+    font-size: 15px;
+    font-weight: 600;
+}
+.pro-pass-v{
+    margin-left: 5px;
+}
+.pro-pass-p{
+    font-family: 20px;
+    font-weight: 800;
+    background: grey;
+}
+.pro-pass-e{
+    margin-bottom: 10px;
+}

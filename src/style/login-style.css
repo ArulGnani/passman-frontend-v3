@@ -1,0 +1,71 @@
+/* login component */
+.login-main{
+    padding: 20px;
+    border: 5px goldenrod solid;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgb(112, 108, 108);
+}
+.login-header{
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.login-err{
+    border: 3px goldenrod solid;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    font-weight: 800;
+}
+.login-form{
+    padding: 10px;
+}
+.login-form-input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-size: 500;
+    border-radius: 10px;
+    font-weight: 800;
+    border: 2px solid gray;
+}
+.login-btn{
+    background: goldenrod;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: background 1s ease-in-out;
+    border: 2px solid goldenrod;
+}
+.login-btn:hover{
+    background: white;
+    color : goldenrod;
+}
+.login-to-sigin{
+    width: 60%;
+    margin-top: 20px;
+    font-size: 15px;
+    margin-left: 15px;
+    font-weight: 800;
+}
+.login-to-sigin-text{
+    margin-left: 5px;
+    border: 2px solid goldenrod;
+    background: goldenrod;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 2px;
+    padding: 4px;
+    transition: background 1s ease-in;
+}
+.login-to-sigin-text:hover{
+    color: goldenrod;
+    background: white;
+}

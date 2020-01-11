@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SignIn from './signIn'
 import Dash from '../dashBoard/dash'
+import '../../style/login-style.css'
 
 class Login extends Component {
     constructor(props){
@@ -52,8 +53,8 @@ class Login extends Component {
             if (data.authKey){
                 this.loginSucc()
                 this.storeAuthKey(data)
-                this.setAllFieldsEmpty()
                 this.switchDashBoard()
+                this.setAllFieldsEmpty()
             }else{
                 this.loginErr(data)               
             }
@@ -149,11 +150,11 @@ class Login extends Component {
 
         if (this.state.login === false){
             return (
-                <div className="login-container">
+                <div className="container" id="top">
                         <div className="login-main">
                         <h2 className="login-header">login</h2>
                         <p className="login-err"><b>{validationErr}</b></p>
-                        <form className="login-form">
+                        <form className="login-form" action="POST">
                             <div className="login-email">
                                 <input name="email" type="email" className="login-form-input" 
                                 placeholder="email id" value={this.state.email} onChange={this.handelChange}/>
@@ -163,7 +164,7 @@ class Login extends Component {
                                 placeholder="password" value={this.state.password} onChange={this.handelChange}/>
                             </div>
                             <button type="submit" className="login-btn" 
-                            onClick={this.login}>
+                            onClick={this.login}> 
                                 Login
                             </button>
                         </form>
@@ -173,7 +174,7 @@ class Login extends Component {
                                 Sign Up
                             </b>
                         </p>     
-                    </div>
+                </div>
             )
         }
     }

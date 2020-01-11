@@ -1,471 +1,32 @@
 *{
-    padding: 0;
-    margin: 0;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Inconsolata', monospace;
 }
-/* main component */
-.main{
-    width: 30%;
-    border: 5px goldenrod solid;
-    padding: 20px;
-    text-align: center;
-    margin: auto;
+#border-box {
+    border: 5px solid goldenrod;
+    box-shadow: 10px 10px 10px gray;
+}
+#top{
     margin-top: 30vh;
 }
-.main-signin{
-    padding: 10px;
-    transition: color 1s ease-in;
-}
-.main-signin:hover{
-    color: goldenrod;
-    font-size: 20px;
-}
-.main-login{    
-    padding: 10px;
-    transition: color 5s;
-}
-.main-login:hover{
-    color: goldenrod;
-    font-size: 20px;
-}
-.main-line{
-    background: goldenrod;
+#main-line {
     padding: 2px;
-}
-
-/* sigin component */
-.signin-container{
-    width: 30%;
-    margin: auto;
-    margin-top: 20vh;
-}
-.signin-main{
-    padding: 20px;
-    border: 5px goldenrod solid;
-}
-.signin-header{
-    font-size: 30px;
-    padding: 10px;
-}
-.signin-form{
-    padding: 10px;
-}
-
-/* sigin err  */
-.sigin-err{
-    margin-left: 10px;
-    border: 2px goldenrod solid;
-    background: red;
-    color: white;
-    text-align: center;
-    font-size: 15px;
-}
-/* sigin err  */
-
-.signin-form-input{
-    padding: 10px 60px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 500;
-}
-.signin-btn{
     background: goldenrod;
-    padding: 8px 20px;
-    font-size: 17px;
-    font-weight: 600;
-    border: none;
-    transition: background 1s ease-in;
-}
-.signin-btn:hover{
-    background: rgb(206, 172, 87);
-    color: white;
-    font-size: 18px;
-}
-.signin-to-login-text{
-    margin-top: 5px;
-    font-weight: 700;
-}
-.signin-to-login{
-    margin-left: 4px;
-    background: yellow;
-    font-size: 20px;
-}
-.signin-to-login:hover{
-    color: rgb(214, 133, 12);
-    background: white;
-}
-
-/* login component */
-.login-container{
-    width: 30%;
-    margin: auto;
-    margin-top: 30vh;
-}
-.login-main{
-    padding: 20px;
-    border: 5px goldenrod solid;
-}
-.login-header{
-    padding: 10px;
-    font-size: 25px;
-    font-weight: 700;
-}
-.login-err{
-    border: 2px goldenrod solid;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    text-align: center;
-    background: rgb(207, 36, 36);
-    color: white;
-}
-.login-form{
-    padding: 10px;
-}
-.login-form-input{
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-size: 500;
-}
-.login-btn{
-    background: goldenrod;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 700;
-    transition: background 1s ease-in;
-}
-.login-btn:hover{
-    background: white;
-    color: #ffbd17;
-    border: 2px goldenrod solid;
-}
-.login-to-sigin{
-    width: 60%;
-    margin-top: 10px;
-    font-size: 15px;
-    margin-left: 5px;
-}
-.login-to-sigin-text{
-    margin-left: 5px;
-    background: yellow;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 2px;
-    transition: background 1s ease-in;
-}
-.login-to-sigin-text:hover{
-    color: teal;
-    background: white;
-}
-/* dashboard */
-.dash-container{
     width: 80%;
     margin: auto;
 }
-.dash-nav{
-    padding: 20px;
-    margin-bottom: 50px;
+#text-animate{
+    transition: color 2s ease-in;
 }
-.dash-nav-item{
-    float: left;
-    padding: 20px;
-    margin-left: 13vw;
-    font-size: 20px;
-    margin-top: 5px;
-}
-.dash-nav-item:hover{
-    border-top: 2px goldenrod solid;
-}
-.dash-logo{
-    float: left;
-    margin-top: 20px;
-    margin-right: 20px;
-    font-size: 25px;
-    font-weight: 800;
-    transition: color 3s ease-out;
-}
-.dash-logo:hover{
+#text-animate:hover{
     color: goldenrod;
-}
-.dash-line{
-    padding: 2px;
-    background: goldenrod;
-    border: none;
-}
-.dash-active{
-    margin-top: 20px;
-}
-.dash-add-password{
-    margin-bottom: 20px;
-}
-.dash-view-password{
-    padding: 20px;
-}
-/* add password cpomonent */
-.add-container{
-    padding: 10px;
-}
-.add-form{
-    width: 30%;
-    padding: 10px;
-}
-.add-line{
-    border: 2px solid goldenrod;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.add-err{
-    color: rgb(204, 52, 52);
-    font-weight: 600;
-}
-.add-ok{
-    color: rgb(52, 160, 52);
-    font-weight: 600;
-}
-.add-form-label{
-    font-size: 20px;
-    font-weight: 600;
-}
-.add-form-input{
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.add-btn{
-    background: goldenrod;
-    border: none;
-    padding: 5px 20px;
-    font-size: 15px;
-    font-weight: 600;
-    transition: background 1s ease-in;
-}
-.add-btn:hover{
-    color: rgb(241, 183, 36);
-    border : 2px goldenrod solid;
-    background: white;
-}
-/* view all password component */
-.view-container{
-    width: 70%;
-}
-.view-password-main{
-    border: 2px goldenrod solid;
-    margin-bottom: 20px;
-    padding: 20px;
-}
-.view-appname-label{
-    font-size: 15px;
-    font-weight: 600;
-}
-.view-appname{
-    font-size: 20px;
-    margin-left: 10px;
-}
-.view-password-label{
-    font-size: 15px;
-    font-weight: 600;
-}
-.view-password{
-    background: grey;
-    margin-top: 10px;
-    margin-left: 10px;
-
-}
-.view-psd-main{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.view-date{
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.view-btn{
-    background: goldenrod;
-    border: none;
-    padding: 5px 20px;
-    font-size: 15px;
-    font-weight: 600;
-}
-.view-btn:hover{
-    background: white;
-    border: 2px goldenrod solid;
-    color: rgb(245, 188, 43);
-}
-.view-search{
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-.view-input{
-    width: 70%;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: 600;
-}
-.view-src-btn{
-    padding: 10px 20px;
-    font-size: 18px;
-    margin-left: 10px;
-    background: goldenrod;
-    border: none;
-    transition: background 1s ease-in;
-}
-.view-src-btn:hover{
-    background: white;
-    border: 2px goldenrod solid;
-    color: rgb(245, 188, 43);
-}
-.view-all-btn{
-    padding: 10px 20px;
-    font-size: 18px;
-    margin-left: 10px;
-    background: goldenrod;
-    border: none;
-    transition: background 1s ease-in;
-}
-.view-all-btn:hover{
-    background: white;
-    border: 2px goldenrod solid;
-    color: rgb(245, 188, 43);
-}
-/* profile component */
-.pro-container{
-    width: 80%;
-    margin: auto;
-    margin-top: 20px;
-}
-.pro-back{
-    float: right;
-    background: goldenrod;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 20px;
-}
-.pro-err{
-    border: 2px goldenrod solid;
-    color: rgb(204, 25, 25);
-    text-align: center;
-}
-.pro-main{
-    padding: 20px;
-    width: 60%;
-}
-.pro-line{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background: goldenrod;
-    padding: 2px;
-    border : none
-}
-.pro-label{
-    font-size: 14px;
-    font-weight: 600;
-}
-.pro-v{
-    margin-left: 5px;
-    font-weight: 600;
-    font-size: 20px;
-}
-.pro-val{
-    margin-bottom: 10px;
-}
-.pro-password-main{
-    padding: 10px;
-}
-.pro-pass{
-    border: 2px goldenrod solid;
-    margin-bottom: 20px;
-    padding: 20px;
-}
-.pro-pass-l{
-    font-size: 15px;
-    font-weight: 600;
-}
-.pro-pass-v{
-    font-family: 20px;
-    font-weight: 800;
-    margin-left: 10px;
-}
-.pro-pass-p{
-    font-family: 20px;
-    font-weight: 800;
-    background: grey;
-}
-.pro-pass-e{
-    margin-bottom: 10px;
-}
-/* about component  */
-.abt-container{
-    width: 80%;
-    margin: auto;
-    margin-top: 20px;
-}
-.abt-line{
-    padding: 2px;
-    border: none;
-    background: goldenrod;
-}
-.abt-main{
-    padding: 20px;
-}
-.abt-header{
-    padding: 10px;
-    font-size: 25px;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-.abt-back{
-    float: right;
-    background: goldenrod;
-    border: none;
-    padding: 5px 20px;
-    font-size: 15px;
-    font-weight: 600;
-    transition: background 1s ease-in;
-}
-.abt-back:hover{
-    background: white;
-    border: 2px goldenrod solid;
-    color: rgb(245, 188, 43);
-}
-.abt-session{
-    padding: 20px;
-    font-size: 18px;
-    font-weight: 600;
-}
-.abt-author{
-    margin-left: 20px;
-    font-size: 20px;
-    font-weight: 800;
-}
-.abt-author a{
-    text-decoration: none;
-    color : black;
-    background: yellow;
-    margin-left: 10px;
-    padding-left: 5px;
-    padding-right: 5px
-}
-.abt-endline{
-    padding: 2px;
-    border: none;
-    background: goldenrod;
-    margin-top: 20px;
-    
 }
 
 
 /* --------------------------------------------------------- */
 /* for mobile view  */
-@media screen and (max-width:400px){
+/* @media screen and (max-width:400px){
     /* main component */
-    .main{
+    /* .main{
         border: 2px greenyellow solid;
         background: none;
         width: 80%;
@@ -485,7 +46,7 @@
         padding: 1px;
     }
     /* sigin component */
-    .signin-container{
+    /* .signin-container{
         width: 80%;
         margin: auto;
         margin-top: 30vh;
@@ -501,9 +62,9 @@
     }
     .signin-form{
         padding: 10px;
-    }
+    } */
     /* sigin err  */
-    .sigin-err{
+    /* .sigin-err{
         margin-left: 10px;
         border: 2px greenyellow solid;
         background: rgb(211, 42, 42);
@@ -545,9 +106,9 @@
     .signin-to-login:hover{
         color: rgb(147, 236, 30);
         background: white;
-    }
+    } */
     /* login component */
-    .login-container{
+    /* .login-container{
         width: 80%;
         margin: auto;
         margin-top: 30vh;
@@ -611,7 +172,4 @@
     .login-to-sigin-text:hover{
         color: teal;
         background: white;
-    }
-    /* dashboard component */
-    /* no dash style default from big-screen */
-}
+    } */

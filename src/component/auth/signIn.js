@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Login from './login'
+import "../../style/sigin-style.css"
 
 class SignIn extends Component{
     constructor(props){
@@ -111,7 +112,7 @@ class SignIn extends Component{
         const validationErr = this.state.validationErr
         if (this.state.signIn){
             return (
-                <div className="signin-container">
+                <div className="container" id="sigin-top">
                     <div className="signin-main">
                     <h2 className="signin-header">sign in</h2>
                     {/* <hr className="signin-line"/> */}

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Login from '../auth/login'
 
+// custom style 
+import '../../style/view-all-style.css'
+
 class ViewAllPasswords extends Component {
     constructor(props){
         super(props)
@@ -70,13 +73,14 @@ class ViewAllPasswords extends Component {
     render() {
         const searchResult = this.state.searchResult.map(password => {
             return (
-                <div className="view-password-main" key={password._id}>
+                <div className="container my-3 mx-1" id="box" key={password._id}>
                     <h3 className="view-appname-main">
                         <small className="view-appname-label">
                             app name :
                         </small>
                             <b className="view-appname"> 
-                                {password.appName} </b>
+                                {password.appName} 
+                            </b>
                     </h3>
                     <h1 className="view-psd-main">
                         <small className="view-password-label">
@@ -98,13 +102,14 @@ class ViewAllPasswords extends Component {
         this.state.allPasswords.reverse()
         const allPasswords = this.state.allPasswords.map(password => {
             return (
-                <div className="view-password-main" key={password._id}>
+                <div className="container my-3 mx-1" id="box" key={password._id}>
                     <h3 className="view-appname-main">
                         <small className="view-appname-label">
                             app name :
                         </small>
                             <b className="view-appname"> 
-                                {password.appName} </b>
+                                {password.appName} 
+                            </b>
                     </h3>
                     <h1 className="view-psd-main">
                         <small className="view-password-label">
@@ -132,32 +137,38 @@ class ViewAllPasswords extends Component {
         }
         if (this.state.searchBox === true){
             return(
-                <div>
+                <div className="container">
                     <div className="view-search">
                         <input type="text" value={this.state.search}
                         onChange={this.handelChange} className="view-input"
-                        placeholder="search password with app name"/>
-                    <button onClick={this.search} className="view-src-btn">search</button>
-                    <button onClick={this.all} className="view-all-btn">all</button>
-                    </div>
-                    {searchResult}
+                        placeholder="find password"/>
+                        <button onClick={this.search} className="view-src-btn">
+                            search
+                        </button>
+                        <button onClick={this.all} className="view-all-btn">
+                            all
+                        </button>
+                    </div>                                                    
                 </div>
             )
         }
         return (
-            <div className="view-container">
-                <div className="view-search">
-                    <input type="text" value={this.state.search}
-                    onChange={this.handelChange} className="view-input"
-                    placeholder="search password with app name"/>
-                    <button onClick={this.search} className="view-src-btn">
-                        search
-                    </button>
-                    <button onClick={this.all} className="view-all-btn">
-                        all
-                    </button>
+            <div>
+                <div className="container">
+                    <div className="view-search">
+                        <input type="text" value={this.state.search}
+                        onChange={this.handelChange} className="view-input"
+                        placeholder="find password"/>
+                        <button onClick={this.search} className="view-src-btn">
+                            search
+                        </button>
+                        <button onClick={this.all} className="view-all-btn">
+                            all
+                        </button>
+                    </div>
                 </div>
-                <div>
+                {/* <hr id="view-line"/> */}
+                <div className="container">
                     { allPasswords } 
                 </div>
             </div>
