@@ -1,4 +1,7 @@
 /* login component */
+#login-top{
+    margin-top: 20vh;
+}
 .login-main{
     padding: 20px;
     border: 5px goldenrod solid;
@@ -48,8 +51,8 @@
     color : goldenrod;
 }
 .login-to-sigin{
-    width: 60%;
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 25px;
     font-size: 15px;
     margin-left: 15px;
     font-weight: 800;
