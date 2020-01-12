@@ -3,6 +3,7 @@ import Login from '../auth/login'
 
 // custom style 
 import '../../style/view-all-style.css'
+ 
 
 class ViewAllPasswords extends Component {
     constructor(props){
@@ -53,13 +54,14 @@ class ViewAllPasswords extends Component {
     search = () => {
         const searchKey = this.state.search
         if (searchKey){
-            const result = this.state.allPasswords.filter(pass => pass.appName === searchKey)
+            const result = this.state.allPasswords.filter(pass => pass.appName.toLocaleLowerCase() === searchKey.toLocaleLowerCase())
             if (result){
                 this.setState({
-                    searchResult : result,
+                    searchResult : [...result],
                     searchBox : true
                 })
             }
+            
         }
     }
 
@@ -68,6 +70,12 @@ class ViewAllPasswords extends Component {
             searchBox : false,
             search : ""
         })
+    }
+
+    copyPassword = (event) => {
+        let copyed = event.target.getAttribute('value')
+        navigator.clipboard.writeText(copyed)
+        alert("password copied...")
     }
 
     render() {
@@ -87,7 +95,11 @@ class ViewAllPasswords extends Component {
                             password :
                         </small>
                             <b className="view-password"> 
-                                {password.genPass} </b>
+                                {password.genPass} 
+                            </b>
+                            <img src="https://img.icons8.com/material-sharp/24/000000/copy.png" 
+                            alt="copy icon" id="copy-icon" onClick={this.copyPassword}
+                            value={password.genPass}/>
                     </h1>
                     <p className="view-date"><small>
                             DOC : {password.passGenratedAt}
@@ -116,7 +128,11 @@ class ViewAllPasswords extends Component {
                             password :
                         </small>
                             <b className="view-password"> 
-                                {password.genPass} </b>
+                                    {password.genPass} 
+                            </b>
+                            <img src="https://img.icons8.com/material-sharp/24/000000/copy.png" 
+                            alt="copy icon" id="copy-icon" onClick={this.copyPassword}
+                            value={password.genPass}/>
                     </h1>
                     <p className="view-date"><small>
                             DOC : {password.passGenratedAt}
@@ -143,12 +159,15 @@ class ViewAllPasswords extends Component {
                         onChange={this.handelChange} className="view-input"
                         placeholder="find password"/>
                         <button onClick={this.search} className="view-src-btn">
-                            search
+                        <img src="https://img.icons8.com/material-sharp/24/000000/search.png"/>
                         </button>
                         <button onClick={this.all} className="view-all-btn">
                             all
                         </button>
-                    </div>                                                    
+                    </div>     
+                    <div>
+                        { searchResult }    
+                    </div>                                              
                 </div>
             )
         }
@@ -160,7 +179,7 @@ class ViewAllPasswords extends Component {
                         onChange={this.handelChange} className="view-input"
                         placeholder="find password"/>
                         <button onClick={this.search} className="view-src-btn">
-                            search
+                            <img src="https://img.icons8.com/material-sharp/24/000000/search.png"/>
                         </button>
                         <button onClick={this.all} className="view-all-btn">
                             all
@@ -169,7 +188,12 @@ class ViewAllPasswords extends Component {
                 </div>
                 {/* <hr id="view-line"/> */}
                 <div className="container">
-                    { allPasswords } 
+                    <div>
+                        { allPasswords }
+                    </div> 
+                    <div>
+                        { searchResult }
+                    </div>
                 </div>
             </div>
         )

@@ -43,7 +43,15 @@ class About extends Component {
                         This is a password manager application the current version being 3.0.2,
                         this application constantly updated
                         <hr />
-                        new ui updated <b>v3.5.2</b>
+                        <ul>
+                            <li>
+                                new ui updated <b>v3.5.2</b>
+                            </li>
+                            <li>
+                                new copy feature and front page <b>v3.5.3</b>
+                            </li>
+                        </ul>
+                        
                     </p>
                     <p className="abt-author">
                         creater : <a href="https://github.com/ArulGnani">v47_</a>

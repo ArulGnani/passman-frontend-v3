@@ -1,8 +1,8 @@
 /* view all password component */
 #box{
     border: 2px solid goldenrod;
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 20px;
+    padding: 20px 10px;
 }
 .view-appname-main{
     line-height: 5px;
@@ -58,7 +58,7 @@
     margin-bottom: 20px;
 }
 .view-input{
-    width: 40%;
+    width: 50vw;
     border: 3px solid gray;
     border-radius: 10px;
     padding: 10px;
@@ -69,14 +69,12 @@
     margin-left: 10px;
 }
 .view-src-btn{
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: 800;
-    margin-left: 15px;
+    padding: 12px ;
+    margin-left: 10px;
     background: goldenrod;
     border: 2px solid goldenrod;
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
     transition: background 1s ease-in;
 }
 .view-src-btn:hover{
@@ -84,10 +82,10 @@
     color: goldenrod;
 }
 .view-all-btn{
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: 800;
-    margin-left: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 5px;
     background: goldenrod;
     border: 3px solid goldenrod;
     border-radius: 10px;
@@ -99,5 +97,10 @@
 }
 #view-line{
     padding: 1px;
+    background: goldenrod;
+}
+#copy-icon{
+    margin-top: 5px;
+    padding: 7px;
     background: goldenrod;
 }

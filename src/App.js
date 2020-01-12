@@ -1,11 +1,11 @@
 import React from 'react';
-import Main from './component/auth/main'
+import FirstPage from './component/firstPage'
 
 class App extends React.Component{
   render(){
     return(
       <div>
-        <Main />
+        <FirstPage />
       </div>
     )
   }

@@ -1,0 +1,29 @@
+#first-box{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+#text-area{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 40vh;
+    background : linear-gradient(to right, #f12711, #f5af19);
+    color: #000;
+    font-weight: 800;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: backgound 4s ease-in-out;
+}
+#text-area:hover{
+    background-position: 200% center;
+}
+
+#next {
+    margin-left: 40%;
+    margin-top: 30%;
+    transition: opacity 2s ease-in-out;
+}
+
+#next:hover{
+    opacity: 0;
+}
