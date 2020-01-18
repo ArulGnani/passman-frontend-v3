@@ -29,6 +29,7 @@ class Dash extends Component {
         this.checkKey()
     }
 
+    // client side validation 
     checkKey = () => {
         const key = localStorage.getItem('auth-key')
         if (key){
@@ -44,6 +45,7 @@ class Dash extends Component {
         }
     }
 
+    // fetch all password for the user 
     fetchAllPassword = (key) => {
         const authKey = key
         fetch('https://passman-v3.herokuapp.com/api/dash/get-all-passwords',{
@@ -63,18 +65,21 @@ class Dash extends Component {
         })
     }
 
+    // add new password 
     addNewPass = (newPass) =>{
         this.setState((old) => ({
             allPasswords : [...old.allPasswords, newPass]
         }))
     }
 
+    // delete password 
     deletePassword = (delId) => {
         if (delId){
             this.fetchDeleted(delId)
         }
     }
 
+    // delete passowrod in db
     fetchDeleted = (delId) => {
         const del = delId
         const delObj = {"delId" : del}
@@ -99,6 +104,7 @@ class Dash extends Component {
         })
     }
 
+    // remove deleted password from view component 
     updateStateAfterDelete = (del) => {
         const key = del
         this.setState({
@@ -106,43 +112,57 @@ class Dash extends Component {
         })
     }
 
+    // redirect to porfile 
     gotoProfile = () => {
         this.setState({
             profile : true
         })
     }
 
+    // log's out  
     logout = () => {
-        this.delKeyInState()
+        this.deleteKeyAndUserInfo()
         alert("your are logged out!..")
     }
 
-    delKeyInState = () => {
+    // delete auth-key in state
+    deleteKeyAndUserInfo = () => {
         this.setState({
-            authKey : ""
+            newPassword : {},
+            allPasswords : [],
+            authKey : "",
+            tokenErr : false,
+            profile : false,
+            logout : false,
+            login : false,
+            about : false,
+            searchVal : ""
         })
         this.destroyLocalKey()
     }
 
+    // delet key on local-storage 
     destroyLocalKey = () => {
         const key = localStorage.getItem('auth-key')
         localStorage.removeItem('auth-key')
         this.gotoLogin()
     }
 
+    // redirect to login after logout
     gotoLogin = () =>{
         this.setState({
             login : true
         })
     }
 
-
+    // rediret to about 
     gotoAbout = () => {
         this.setState({
             about : true
         })
     }
 
+    // redirect to search 
     search = (event) => {
         this.setState({
             searchVal : event.target.value
@@ -175,43 +195,43 @@ class Dash extends Component {
         } 
 
         return (
-            <div className="">
-                <nav className="navbar navbar-expand-lg navbar-dark" id="nav-bg">
-                    <h1 className="navbar-brand" id="dash-header">DashBoard</h1>
-                    <button id="btn" className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul className="navbar-nav">
-                            <li className="nav-item mr-5">
-                                <div id="nav-in" className="nav-link text-center" onClick={this.gotoProfile}>
-                                    Profile 
-                                </div>
-                            </li>
-                            <li className="nav-item mr-5">
-                                <div id="nav-in" className="nav-link text-center" onClick={this.gotoAbout}>
-                                    About
-                                </div>
-                            </li>
-                            <li className="nav-item mr-5">
-                                <div id="nav-in" className="nav-link text-center" onClick={this.logout}>
-                                    Logout 
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <div>
+                <div className="">
+                    <nav className="navbar navbar-expand-lg navbar-dark" id="nav-bg">
+                        <h1 className="navbar-brand" id="dash-header">DashBoard</h1>
+                        <button id="btn" className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <ul className="navbar-nav">
+                                <li className="nav-item mr-5">
+                                    <div id="nav-in" className="nav-link text-center" >
+                                        Profile 
+                                    </div>
+                                </li>
+                                <li className="nav-item mr-5">
+                                    <div id="nav-in" className="nav-link text-center" >
+                                        About
+                                    </div>
+                                </li>
+                                <li className="nav-item mr-5">
+                                    <div id="nav-in" className="nav-link text-center" onClick={this.logout}>
+                                        logout 
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                     <div>
-                        <AddPassword newPassword={this.addNewPass}/>
-                    </div>
-                    <hr id="nav-line"/>
-                    <div>
-                        <ViewAllPasswords allPasswords={this.state.allPasswords}
-                        deletePassword={this.deletePassword}/>
-                    </div>
-                </div>        
-            </div>
+                        <div>
+                            <AddPassword newPassword={this.addNewPass}/>
+                        </div>
+                        <hr id="nav-line"/>
+                        <div>
+                            <ViewAllPasswords allPasswords={this.state.allPasswords}
+                            deletePassword={this.deletePassword}/>
+                        </div>
+                    </div>        
+                </div>
         )
     }
 }

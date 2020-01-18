@@ -31,6 +31,7 @@ class Login extends Component {
             this.setState({ validationErr : check })
         }else{
             this.loginUser()
+            
         }
     }
 
