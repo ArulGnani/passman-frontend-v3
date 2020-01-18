@@ -32,7 +32,7 @@ class FirstPage extends Component {
                         <span></span>
                     </div>
                     <div id="text-area">
-                        Pass Man
+                        passman
                     </div>
                     <div id="next-box">
                             <img id="next" onClick={this.gotoMain}
