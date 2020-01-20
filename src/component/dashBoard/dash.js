@@ -204,12 +204,12 @@ class Dash extends Component {
                         <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                             <ul className="navbar-nav">
                                 <li className="nav-item mr-5">
-                                    <div id="nav-in" className="nav-link text-center" >
+                                    <div id="nav-in" className="nav-link text-center" onClick={this.gotoProfile}>
                                         Profile 
                                     </div>
                                 </li>
                                 <li className="nav-item mr-5">
-                                    <div id="nav-in" className="nav-link text-center" >
+                                    <div id="nav-in" className="nav-link text-center" onClick={this.gotoAbout}>
                                         About
                                     </div>
                                 </li>
