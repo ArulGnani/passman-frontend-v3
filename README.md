@@ -1,3 +1,5 @@
 # passman-frontend-v3
 
-URL : https://passman.netlify.com/
+> This app generator strong and stores password securly Allow user to access all ther stored password with one master password.
+
+## URL : https://passman.netlify.com/

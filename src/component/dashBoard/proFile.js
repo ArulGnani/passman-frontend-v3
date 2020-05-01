@@ -37,7 +37,6 @@ class Profile extends Component {
     }
 
     fetchProfile = (key) => {
-        console.log(key)
         fetch('https://passman-v3.herokuapp.com/api/dash/user-profile',{
             method : "GET",
             headers : { "auth-key" : key }
